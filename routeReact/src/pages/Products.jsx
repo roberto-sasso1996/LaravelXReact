@@ -46,6 +46,9 @@ function Products() {
           {products.map((product) => (
             <div className="col-12 col-md-3 my-2" key={product.id}>
               <div className="card">
+              {product.image && (
+                    <img src={`http://127.0.0.1:8000${product.image}`} alt={product.name} width="150" />
+                )}
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">{product.price}$</p>

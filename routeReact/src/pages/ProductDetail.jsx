@@ -12,6 +12,11 @@ function ProductDetail() {
       {/* <p>ID prodotto: {id}</p> */}
       <div className="container my-5">
         <div className="row justify-content-center">
+          <div className="col-12 col-md-3">
+          {product.image && (
+              <img src={`http://127.0.0.1:8000${product.image}`} alt={product.name} width="150" className="img-fluid"/>
+          )}
+          </div>
           <div className="col-12 col-md-8">
               <h1>Dettaglio Prodotto</h1>
               <h2>{product.name}</h2>
